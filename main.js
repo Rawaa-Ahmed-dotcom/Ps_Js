@@ -95,7 +95,7 @@ addOddToN(47) ➞ 576
 
 function addOddToN(n) {
 	let result = 0;
-	for(let i = n; i > 0 ; i = i - 2) {
+	for(let i = n; i > 0 ; i -= 2) {
 			result += i;
 	}
 	return result;
