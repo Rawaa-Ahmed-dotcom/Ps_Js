@@ -9,14 +9,18 @@ printArray(3) ➞ [1, 2, 3]
 printArray(6) ➞ [1, 2, 3, 4, 5, 6]
 */
 function printArray(number) {
-    let newArray = [];
-    for(let i = 1; i <= number ; i++) {
-        newArray.push(i);
-    }
-    return newArray;
+  let newArray = [];
+  let counter = 0;
+  for(let i = 1; i <= number ; i++) {
+      newArray[counter] = i;
+      counter++;
+      
+  }
+  return newArray;
 }
 
 console.log(printArray(6)); // [1, 2, 3, 4, 5, 6]
+
 
 
 // Solving Problem [2]
@@ -54,8 +58,10 @@ arrayValuesTypes([21.1, "float", "array", ["I am array"], null, true, 214])
 
 function arrayValuesTypes(arr) {
 	let  typesArray = [];
+  let counter = 0;
 	for (let i = 0; i < arr.length; i++ ) {
-		typesArray.push(typeof arr[i]);
+		typesArray[counter] = typeof arr[i];
+    counter ++;
 	}
 	return typesArray;
 }
